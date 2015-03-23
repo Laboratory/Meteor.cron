@@ -3,9 +3,8 @@
   Meteor.Cron = (function() {
     Cron.prototype.delay = 1000 * 60;
 
-    Cron.events = [];
-
     function Cron(options) {
+      this.events = [];
       if (options != null ? options.delay : void 0) {
         this.delay = options.delay;
       }

@@ -1,8 +1,8 @@
 class Meteor.Cron
   delay:1000*60
-  @events:[]
 
   constructor:(options)->
+    @events = []
     @delay = options.delay if options?.delay
     @convert(options.events) if options?.events
     @do()
